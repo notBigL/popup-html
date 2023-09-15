@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>XAI</title>
+    <link rel="stylesheet" href="bulma.min.css"/>
+</head>
+<body>
+<div class="container m-3">
+    <h1 class="title">XAI</h1>
+    <div class="container">
+        <label class="label">Select Model</label>
+        <div class="select">
+            <select id="selectModel">
+                <option value="sentiment">Sentiment</option>
+                <option value="irony">Irony</option>
+            </select>
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">Status</label>
+        <span id="analysing" class="tag is-light">Analysing</span>
+        <span id="finished" class="tag is-success">Finished</span>
+        <span id="error" class="tag is-danger">Error</span>
+    </div>
+</div>
+
+<div class="container m-3">
+    <div class="field">
+        <label class="label">Input</label>
+        <div class="control">
+            <input type="text" class="input" id="textInput">
+        </div>
+    </div>
+</div>
+
+<div class="container m-3">
+    <button class="button is-success is-fullwidth" id="startButton">Start Analysing</button>
+</div>
+<div class="container m-3">
+    <div class="field">
+        <label class="label">Result</label>
+        <span class="tag is-success">Positive</span>
+        <span class="tag is-light">Neutral</span>
+        <span class="tag is-danger">Negative</span>
+    </div>
+</div>
+
+<div class="container m-3">
+    <div id="spaceForResult"></div>
+</div>
+
+</body>
+
+<script src="popup.js"></script>
+</html>

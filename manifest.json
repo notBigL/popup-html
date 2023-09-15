@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "XAI Popup",
+  "description": "A lil popup window in your browser that can analyse sentences",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "icons": {
+    "48": "images/red-48.png"
+  },
+  "background": {
+    "service-worker": "background.js",
+    "type": "module"
+  },
+  "permissions": [
+    "storage"
+  ]
+}
