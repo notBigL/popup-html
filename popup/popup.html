@@ -18,12 +18,13 @@
                 <option value="irony">Irony</option>
             </select>
         </div>
-    </div>
-    <div class="field">
-        <label class="label">Status</label>
-        <span id="analysing" class="tag is-light">Analysing</span>
-        <span id="finished" class="tag is-success">Finished</span>
-        <span id="error" class="tag is-danger">Error</span>
+        <div class="field">
+            <label class="label">Status</label>
+            <span id="analysing" class="tag is-light" style="display: none">Analysing</span>
+            <span id="ready" class="tag is-info">Ready</span>
+            <span id="finished" class="tag is-success" style="display: none">Finished</span>
+            <span id="error" class="tag is-danger" style="display: none">Error</span>
+        </div>
     </div>
 </div>
 
@@ -37,19 +38,16 @@
 </div>
 
 <div class="container m-3">
-    <button class="button is-success is-fullwidth" id="startButton">Start Analysing</button>
+    <button class="button is-info is-fullwidth" id="startButton">Start Analysing</button>
 </div>
 <div class="container m-3">
-    <div class="field">
-        <label class="label">Result</label>
-        <span class="tag is-success">Positive</span>
-        <span class="tag is-light">Neutral</span>
-        <span class="tag is-danger">Negative</span>
-    </div>
+    <label class="label">Result</label>
+    <div id="spaceForResultSentence"></div>
+
 </div>
 
 <div class="container m-3">
-    <div id="spaceForResult"></div>
+    <div id="spaceForHighlightedWords"></div>
 </div>
 
 </body>
