@@ -47,7 +47,6 @@ startButtonElement.onclick = function () {
                 enableElement(startButtonElement)
             });
     }
-    console.log(inputElement.value)
 }
 
 function addResultsToPopup(result) {
@@ -82,6 +81,8 @@ function getResultSentence(table) {
 
 function getHighlightedWords(table) {
     let result = table.children[0].children[1].children[4]
+    result.removeChild(result.children[0])
+    result.removeChild(result.children[result.children.length - 1])
     return result
 }
 
